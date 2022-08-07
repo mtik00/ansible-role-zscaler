@@ -1,0 +1,4 @@
+---
+
+- name: home_folders
+  src: https://github.com/mtik00/ansible-role-home-folders.git

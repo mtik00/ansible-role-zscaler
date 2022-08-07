@@ -3,8 +3,16 @@
 
 - name: Verify
   hosts: all
-  gather_facts: false
+  gather_facts: true
+  vars:
+    zscaler_pem_destination: /tmp
   tasks:
-    - name: Example assertion
-      ansible.builtin.assert:
-        that: true
+    - name: bundle pem exists
+      block:
+        - name: register pem
+          ansible.builtin.stat:
+            path: "{{ zscaler_pem_destination }}/zscaler-bundle.pem"
+          register: pem
+        - name: bundle pem exists
+          ansible.builtin.assert:
+            that: pem.stat.exists

@@ -1,1 +1,7 @@
 ---
+env_files_path: "{{ ansible_user_dir }}/.env-files.d"
+apt_cache_valid_time: 3600
+zscaler_install_url: https://d32a6ru7mhaq0c.cloudfront.net/Zscaler-linux-1.2.1.3-installer.run
+
+# NOTE: This directory should already exist
+zscaler_pem_destination: "{{ ansible_user_dir }}/.ssh"

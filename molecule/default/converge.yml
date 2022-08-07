@@ -1,7 +1,10 @@
 ---
 - name: Converge
   hosts: all
-  gather_facts: false
+  gather_facts: true
+  vars:
+    zscaler_pem_destination: /tmp
+
   tasks:
     - name: "Include mtik00.zscaler"
       ansible.builtin.include_role:

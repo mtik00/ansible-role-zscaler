@@ -16,4 +16,6 @@ galaxy_info:
 
   galaxy_tags: []
 
-dependencies: []
+dependencies:
+  - name: home_folders
+    src: https://github.com/mtik00/ansible-role-home-folders.git
