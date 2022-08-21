@@ -1,3 +1,4 @@
 ---
 
-[]
+- name: mtik00.home_folders
+  src: git+https://github.com/mtik00/ansible-role-home-folders.git
